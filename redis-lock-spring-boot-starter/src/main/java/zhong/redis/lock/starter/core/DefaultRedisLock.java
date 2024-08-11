@@ -147,7 +147,6 @@ public class DefaultRedisLock implements RedisLock {
     }
 
     @Override
-
     public boolean lockAndKeepAlive(String k, long timeout, TimeUnit timeUnit) {
         String v = String.valueOf(Thread.currentThread().getId());
         return lock(k, v, timeout, timeUnit, true);
