@@ -1,5 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  zhong.redis.lock.starter.StarterConfig
+  zhong.redis.lock.starter.RedisLockConfig
 
 org.springframework.boot.SpringApplicationRunListener=\
   zhong.redis.lock.starter.AppRunListener

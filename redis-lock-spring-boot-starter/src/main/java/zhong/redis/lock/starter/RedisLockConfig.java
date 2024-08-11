@@ -29,5 +29,5 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @EnableConfigurationProperties(RedisLockProps.class)
 @ConditionalOnProperty(prefix = RedisLockProps.PROPERTIES_PREFIX, name = "enable", havingValue = "true", matchIfMissing = false)
-public class StarterConfig {
+public class RedisLockConfig {
 }
