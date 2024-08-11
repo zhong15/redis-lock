@@ -13,9 +13,8 @@
 - 配置 application.yml
 ```yaml
 zhong:
-  redis:
-    lock:
-      enable: true  # 配置是否启用，默认 false
-      keep-alive:   # 定时任务执行周期，默认 60000，最小值 5000，单位：ms
-      factor:       # keep-alive 系数，默认 1.5，最小值 1.1，即使用 RedisLock#lockAndKeepAlive(...) api 时 timeout 时长必须大于等于 keep-alive * factor
+  redis-lock:
+    enable: true  # 配置是否启用，默认 false
+    keep-alive:   # 定时任务执行周期，默认 60000，最小值 5000，单位：ms
+    factor:       # keep-alive 系数，默认 1.5，最小值 1.1，即使用 RedisLock#lockAndKeepAlive(...) api 时 timeout 时长必须大于等于 keep-alive * factor
 ```

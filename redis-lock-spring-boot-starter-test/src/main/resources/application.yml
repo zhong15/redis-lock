@@ -11,8 +11,7 @@ spring:
     database: 0
     password:
 zhong:
-  redis:
-    lock:
-      enable: true
-      keep-alive:
-      factor:
+  redis-lock:
+    enable: true
+    keep-alive:
+    factor:

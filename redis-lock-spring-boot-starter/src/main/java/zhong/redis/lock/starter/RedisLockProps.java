@@ -27,9 +27,9 @@ import javax.validation.constraints.Min;
  * @since 0.0.1
  */
 @Validated
-@ConfigurationProperties(prefix = RedisLockStarterProperties.PROPERTIES_PREFIX)
-public class RedisLockStarterProperties {
-    static final String PROPERTIES_PREFIX = "zhong.redis.lock";
+@ConfigurationProperties(prefix = RedisLockProps.PROPERTIES_PREFIX)
+public class RedisLockProps {
+    static final String PROPERTIES_PREFIX = "zhong.redis-lock";
 
     private static final int MIN_KEEP_ALIVE = 5_000;
     private static final int DEFAULT_KEEP_ALIVE = 60_000;

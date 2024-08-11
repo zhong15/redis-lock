@@ -24,7 +24,7 @@ import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.data.redis.core.script.RedisScript;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
-import zhong.redis.lock.starter.RedisLockStarterProperties;
+import zhong.redis.lock.starter.RedisLockProps;
 import zhong.redis.lock.starter.utils.NamedThreadFactory;
 
 import javax.annotation.PostConstruct;
@@ -57,7 +57,7 @@ public class DefaultRedisLock implements RedisLock {
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
     @Autowired
-    private RedisLockStarterProperties redisLockStarterProperties;
+    private RedisLockProps redisLockProps;
 
     private static String getLockMapKey(Thread thread, String k) {
         return thread.getId() + "-" + k;
@@ -90,10 +90,10 @@ public class DefaultRedisLock implements RedisLock {
     private void initProps() {
         log.info("init properties");
 
-        keepAlive = redisLockStarterProperties.getKeepAlive();
+        keepAlive = redisLockProps.getKeepAlive();
         log.info("keepAlive: {}", keepAlive);
 
-        factor = redisLockStarterProperties.getFactor();
+        factor = redisLockProps.getFactor();
         log.info("factor: {}", factor);
     }
 
