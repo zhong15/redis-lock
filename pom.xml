@@ -23,6 +23,8 @@
 	<version>${revision}</version>
 
     <modules>
+		<module>redis-lock-spring-boot-starter</module>
+		<module>redis-lock-spring-boot-starter-test</module>
 	</modules>
 
     <packaging>pom</packaging>
