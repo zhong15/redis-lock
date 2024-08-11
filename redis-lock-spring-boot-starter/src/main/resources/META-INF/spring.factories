@@ -1,0 +1,8 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  zhong.redis.lock.starter.StarterConfig
+
+org.springframework.boot.SpringApplicationRunListener=\
+  zhong.redis.lock.starter.AppRunListener
+
+org.springframework.context.ApplicationContextInitializer=\
+  zhong.redis.lock.starter.AppContextInitializer
