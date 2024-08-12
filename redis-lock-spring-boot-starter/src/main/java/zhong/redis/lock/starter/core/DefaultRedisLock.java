@@ -217,10 +217,10 @@ public class DefaultRedisLock implements RedisLock {
     private static final class LockCache {
         private final Thread thread;
         private final String k;
-        private final Long timeout;
+        private final long timeout;
         private final TimeUnit timeUnit;
 
-        private LockCache(Thread thread, String k, Long timeout, TimeUnit timeUnit) {
+        private LockCache(Thread thread, String k, long timeout, TimeUnit timeUnit) {
             this.thread = thread;
             this.k = k;
             this.timeout = timeout;
